@@ -127,21 +127,42 @@ const orderTotals = orders.map(function(money){
   return total
 })
 
-console.log(orderTotals)
+// console.log(orderTotals)
 // ////////// PROBLEM 6 //////////
 
-// // Do not edit the code below.
-// const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
-// {"owner":"Bob","price":73},{"owner":"Barry","price":57},{"owner":"Barry","price":128},
-// {"owner":"Bob","price":119},{"owner":"Barry","price":133},{"owner":"Barry","price":27},
-// {"owner":"Barry","price":138},{"owner":"Bob","price":68},{"owner":"Bob","price":50},
-// {"owner":"Barry","price":9},{"owner":"Bob","price":123},{"owner":"Bob","price":135},
-// {"owner":"Barry","price":30},{"owner":"Barry","price":129},{"owner":"Barry","price":38},
-// {"owner":"Bob","price":133},{"owner":"Barry","price":109},{"owner":"Bob","price":115}];
-// // Do not edit the code above.
+// Do not edit the code below.
+const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
+{"owner":"Bob","price":73},{"owner":"Barry","price":57},{"owner":"Barry","price":128},
+{"owner":"Bob","price":119},{"owner":"Barry","price":133},{"owner":"Barry","price":27},
+{"owner":"Barry","price":138},{"owner":"Bob","price":68},{"owner":"Bob","price":50},
+{"owner":"Barry","price":9},{"owner":"Bob","price":123},{"owner":"Bob","price":135},
+{"owner":"Barry","price":30},{"owner":"Barry","price":129},{"owner":"Barry","price":38},
+{"owner":"Bob","price":133},{"owner":"Barry","price":109},{"owner":"Bob","price":115}];
+// Do not edit the code above.
 
-// /*
-//   Use a high order method(s) to create to get the sum of bobsTotal.
-// */
+/*
+  Use a high order method(s) to create to get the sum of bobsTotal.
+*/
 
-// // CODE HERE
+// CODE HERE
+// const bobsMap = purchases.map(function(cost){
+//  return cost.price
+// })
+// // console.log(bobsMap)
+// const bobsTotal = bobsMap.reduce(function(acc, curr){
+//   return acc + curr
+// })
+
+const bobFilter = purchases.filter(function(name){
+  return name.owner === "Bob"
+})
+// console.log(bobFilter)
+const bobMap = bobFilter.map(function(cost){
+  return cost.price
+})
+// console.log(bobMap)
+const bobsTotal = bobMap.reduce(function(acc, curr){
+  return acc + curr
+})
+
+console.log(bobsTotal)
