@@ -154,7 +154,12 @@ const uniq = (arr, callback) => {
 */
 
 // CODE HERE
-const each = (arr, calla) 
+const each = (arr, callback) => {
+  arr.forEach(function(element, index){
+   callback(element, index)
+  })
+}
+// each(names)
 
 
 /*
@@ -165,7 +170,8 @@ const each = (arr, calla)
 */
 
 // CODE HERE
-
+each(names, (element, index) =>
+console.log(`The name at ${index} is ${element}`))
 
 ////////// PROBLEM 7 //////////
 
