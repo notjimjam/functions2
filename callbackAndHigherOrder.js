@@ -109,6 +109,17 @@ const contains = (arr, name, callback) => {
 */
 
 // CODE HERE
+// const uniq = (arr, callback) => {
+//   for(let i = 0; i < arr.length; i++) {
+//     for(let j = i; j < arr.length; j++) {
+//       if(arr[i] === arr[j]) {
+//         arr.splice(j, 1)
+//         j--
+//       }
+//     }
+//   } callback(arr)
+// }
+
 const uniq = (arr, callback) => {
   for(let i = 0; i < arr.length; i++){
     for(let j = i + 1; j < arr.length; j++) {
@@ -129,6 +140,9 @@ const uniq = (arr, callback) => {
 */
 
 // CODE HERE
+// uniq(names, uniqArr =>
+//   console.log(`The new names array with all the duplicate items
+//   removed is ${uniqArr}`))
 
 
 
@@ -139,7 +153,8 @@ const uniq = (arr, callback) => {
   For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
 */
 
-// CODE HERE 
+// CODE HERE
+const each = (arr, calla) 
 
 
 /*
