@@ -1,57 +1,57 @@
-/*
-    You can check your answers in this file
-    by console.logging the variables that are 
-    storing the results of your function calls.
-*/
+// /*
+//     You can check your answers in this file
+//     by console.logging the variables that are 
+//     storing the results of your function calls.
+// */
 
-////////// PROBLEM 1 //////////
+// ////////// PROBLEM 1 //////////
 
-// Do not edit the code below.
-const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
-// Do not edit the code above.
+// // Do not edit the code below.
+// const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
+// // Do not edit the code above.
 
-/*
-  Use the filter method on mixedNumbers to make a new array of just the even numbers.
-  The filter function takes a callback with the parameters
-  function(element, index, wholeArray){}  Function Form
-  (element, index, wholeArray)=>{}    Arrow Form
-*/
+// /*
+//   Use the filter method on mixedNumbers to make a new array of just the even numbers.
+//   The filter function takes a callback with the parameters
+//   function(element, index, wholeArray){}  Function Form
+//   (element, index, wholeArray)=>{}    Arrow Form
+// */
 
-// CODE HERE
-const evenNumbers = mixedNumbers.filter(function(even){
-  return even % 2 === 0
-})
-// console.log(evenNumbers)
-// = mixedNumbers.filter(/* Provide Your Callback Here */)
-
-
-
-////////// PROBLEM 2 //////////
-
-// Do not edit the code below.
-const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
-// Do not edit the code above.
-
-/*
-  Use the map method on the prices array to calculate a new array of post-tax prices.
-  Use a 7% tax rate.
-  Math reminder! To calculate the price after tax, multiply the price by 1 plus the taxRate as a decimal.
-  Example: if tax is 7%, the price afterTax could be calculated like this: afterTax = price * 1.07) 
-  The map function also takes a callback with the parameters
-  function(element, index, wholeArray){}  Function Form
-  (element, index, wholeArray)=>{}    Arrow Form
-*/
-
-// CODE HERE
-const postTaxPrices = prices.map(function(afterTax){
-  return afterTax = prices * 1.07
-})
-// console.log(postTaxPrices)
-// = prices.map(/* Provide Your Callback Here );
+// // CODE HERE
+// const evenNumbers = mixedNumbers.filter(function(even){
+//   return even % 2 === 0
+// })
+// // console.log(evenNumbers)
+// // = mixedNumbers.filter(/* Provide Your Callback Here */)
 
 
 
-////////// PROBLEM 3 //////////
+// ////////// PROBLEM 2 //////////
+
+// // Do not edit the code below.
+// // const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
+// // Do not edit the code above.
+
+// /*
+//   Use the map method on the prices array to calculate a new array of post-tax prices.
+//   Use a 7% tax rate.
+//   Math reminder! To calculate the price after tax, multiply the price by 1 plus the taxRate as a decimal.
+//   Example: if tax is 7%, the price afterTax could be calculated like this: afterTax = price * 1.07) 
+//   The map function also takes a callback with the parameters
+//   function(element, index, wholeArray){}  Function Form
+//   (element, index, wholeArray)=>{}    Arrow Form
+// */
+
+// // CODE HERE
+// // const postTaxPrices = prices.map(function(afterTax){
+// //   return afterTax = prices * 1.07
+// // })
+// // console.log(postTaxPrices)
+// // = prices.map(/* Provide Your Callback Here );
+
+
+
+// ////////// PROBLEM 3 //////////
 
 // // Do not edit the code below.
 // const populations = [8175133, 3792621, 2695598, 2100263];
@@ -65,11 +65,16 @@ const postTaxPrices = prices.map(function(afterTax){
 // */
 
 // // CODE HERE
-// const totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
+// const totalPopulation = populations.reduce(function(acc, curr){
+//   return acc + curr
+// })
+
+// // console.log(totalPopulation)
+//  //  = populations.reduce(/* Provide Your Callback Here */)
 
 
 
-// ////////// PROBLEM 4 //////////
+// // ////////// PROBLEM 4 //////////
 
 // // Do not edit the code below.
 // const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulbabunny","CP":135},
@@ -90,27 +95,39 @@ const postTaxPrices = prices.map(function(afterTax){
 // */
 
 // // CODE HERE
-// const myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
-
+// const myStrongest = monstersInYourPocket.filter(function(elem){
+//   return elem.CP > 200
+// }) 
+// = monstersInYourPocket.filter(/* Provide Your Callback Here */)
+// console.log(myStrongest)
 
 
 // ////////// PROBLEM 5 //////////
 
-// // Do not edit code below.
-// const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax":0.11},
-// {"price":80,"tax":0.11},{"price":69,"tax":0.06},{"price":68,"tax":0.14},
-// {"price":72,"tax":0.14},{"price":51,"tax":0.09},{"price":89,"tax":0.15},
-// {"price":48,"tax":0.13}];
-// // Do not edit code above.
+// Do not edit code below.
+const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax":0.11},
+{"price":80,"tax":0.11},{"price":69,"tax":0.06},{"price":68,"tax":0.14},
+{"price":72,"tax":0.14},{"price":51,"tax":0.09},{"price":89,"tax":0.15},
+{"price":48,"tax":0.13}];
+// Do not edit code above.
 
-// /*
-//   Use a higher order method to get all the order totals after adding in the sales tax (given to you as a tax rate, hint: you'll need to do some multiplication). Your answer should be an array of numbers, one total for each order.
-// */
+/*
+  Use a higher order method to get all the order totals after adding in the sales tax 
+  (given to you as a tax rate, hint: you'll need to do some multiplication). 
+  Your answer should be an array of numbers, one total for each order.
+*/
 
-// // CODE HERE
+// CODE HERE
 
+// const orderTotals = orders.filter(function(elem){
+//   return totals = elem.price + (elem.price * elem.tax)
+// })
+const orderTotals = orders.map(function(money){
+  let total = (money.price + (money.tax * money.price))
+  return total
+})
 
-
+console.log(orderTotals)
 // ////////// PROBLEM 6 //////////
 
 // // Do not edit the code below.
