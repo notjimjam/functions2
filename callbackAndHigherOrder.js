@@ -109,6 +109,17 @@ const contains = (arr, name, callback) => {
 */
 
 // CODE HERE
+const uniq = (arr, callback) => {
+  for(let i = 0; i < arr.length; i++){
+    for(let j = i + 1; j < arr.length; j++) {
+        if(arr[i] === arr[j]) {
+          arr.splice(j, 1)
+          j--
+        }
+      }
+    }
+    callback(arr)
+  } 
 
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
