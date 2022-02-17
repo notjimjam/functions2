@@ -170,16 +170,32 @@ const each = (arr, callback) => {
 */
 
 // CODE HERE
-each(names, (element, index) =>
-console.log(`The name at ${index} is ${element}`))
+// each(names, (element, index) =>
+// console.log(`The name at ${index} is ${element}`))
 
 ////////// PROBLEM 7 //////////
 
 /*
-  Write a function called getUserById that takes in three parameters: an array of objects (users), an id and a callback, and searches for the user with a matching id.
-  When the correct user object is found, invoke the callback with the user object as an argument.
+Write a function called getUserById that takes in three parameters: an array of objects (users), 
+an id and a callback, and searches for the user with a matching id.
+When the correct user object is found, invoke the callback with the user object as an argument.
 */
 
+// const getUserById = (arr, id, callback) => {
+//   for(let i = 0; i < arr.length; i++){
+//     if(arr[i].id === id) {
+//       return callback(arr[i])
+//     }
+//   }
+// }
+
+const getUserById = (arr, id, cb) => {
+  for (let i = 0; i < arr.length; i++) {
+      if (arr[i].id === id) {
+          return cb(arr[i])
+      }
+  }
+}
 // Do not edit the code below.
 var users = [
   {
@@ -204,7 +220,6 @@ var users = [
 // Do not edit the code above.
 
 // CODE HERE 
-
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
