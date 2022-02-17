@@ -189,13 +189,7 @@ When the correct user object is found, invoke the callback with the user object 
 //   }
 // }
 
-const getUserById = (arr, id, cb) => {
-  for (let i = 0; i < arr.length; i++) {
-      if (arr[i].id === id) {
-          return cb(arr[i])
-      }
-  }
-}
+
 // Do not edit the code below.
 var users = [
   {
@@ -220,6 +214,13 @@ var users = [
 // Do not edit the code above.
 
 // CODE HERE 
+const getUserById = (arr, id, cb) => {
+  for (let i = 0; i < arr.length; i++) {
+      if (arr[i].id === id) {
+          return cb(arr[i])
+      }
+  }
+}
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
@@ -246,6 +247,7 @@ var users = [
 */
 
 // CODE HERE
+const addingFactory = (num1) => (num2) => num1 + num2
 
 /*
   Now that you have addingFactory, you can create other
@@ -260,6 +262,7 @@ var users = [
 */
 
 // CODE HERE
+const addTen = addingFactory(10)
 
 /*
   Now the inner function is stored in the addTen variable! 
@@ -272,7 +275,7 @@ var users = [
 */
 
 // CODE HERE
-
+// console.log(addTen(56))
 /*
   Let's make another function from the addingFactory. 
 
@@ -285,3 +288,7 @@ var users = [
 */
 
 // CODE HERE
+
+const addFiftyFive = addingFactory(55)
+
+console.log(addFiftyFive(78))
